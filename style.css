@@ -1,128 +1,117 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
 
 
-/****************** GENERAL SETTINGS *********************/
 
 *{
-    margin:0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.fix {
-    content: "";
-    display: table;
-    clear: both;
-}
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'lato',sans-serif;
+    background: url(./media/5566879.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-
-.container {
-    width: 1000px;
+.container{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background: whitesmoke;
-    overflow: hidden;
+    background: white;
+    width: 1200px;
+    height: 550px;
+   box-shadow: 0 0 30px rgb(77, 76, 76);
 }
 
-
-.player-0-panel,
-.player-1-panel {
-    width: 50%;
+.player-0-panel, .player-1-panel {
+    width:50%;
     float: left;
-    height: 600px;
-    padding: 100px;
+    height: 100px;
+    padding:20px;
+    padding-top: 5%;
+    
+}
+.active {
+    background: whitesmoke;
+    height: 100%;
+}
+.active .player-name {
+    font-weight: bold;
+    font-size: 1.9rem;
 }
 
 .player-name {
-    font-size: 40px;
     text-align: center;
-    letter-spacing: 2px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    position: relative;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    padding-top: 5%;
 }
-
-.player-score{
+.player-score {
     text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 130px;
+    font-size: 100px;
+    color: red;
+    margin-top: 5%;
 }
-
-.active {
-    background: #f7f7f7;
-}
-
-.active .player-name {
-        font-weight: 300;
-    }
-
-.active .player::after {
-    content: "\2022";
-    font-size: 47px;
-    position: absolute;
-    color: #eb4d4d;
-    top: -7px;
-    right: 10px;
-}
-
-.player-current-score{
-    font-size: 30px;
-}
-
-.player-current-box{
-    background: #eb4d4d;
+.player-current-box {
+    background-color: red;
     color: #fff;
     width: 40%;
     margin: 0 auto;
     padding: 12px;
     text-align: center;
+    margin-top: 25%;
 }
-
 .player-current-label {
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    font-size: 12px;
-    color: #222;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-top: -10px;
+    color: black;
+}
+.player-current-score {
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 button {
-    position: absolute;
     width: 200px;
+    position: absolute;
     left: 50%;
-    transform: translateX(-50%);
-    color: #555;
+    transform: translate(-50%);
+    cursor: pointer;
     background: none;
     border: none;
-    font-size: 20px;
-    text-transform: uppercase;
-    cursor: pointer;
-    font-weight: 300;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+button:hover{
+    transition: 0.3s;
+    font-size: 1.7rem;
+}
+.btn-new {
+    top:30px;
+}
+.btn-hold{
+    top: 440px;
+}
+.btn-roll {
+    top: 380px;
+}
+.btn-icon{
+    margin: 10px;
+    font-size: 1.6rem;
+    color: red;
 }
 
-button:hover {
-    font-weight: 600;
-    margin-right: 20px;
-}
-
-button:focus {
-    outline: none;
-}
-.btn-new { top: 45px;}
-.btn-roll { top: 403px;}
-.btn-hold { top: 467px;}
-
-/* Dice images */
 .dice {
     position: absolute;
+    width: 130px;
     left: 50%;
-    top: 178px;
-    transform: translateX(-50%);
-    height: 100px;
-    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+    top: 40%;
+    transform: translate(-50%,-40%);
+    box-shadow: 0px 0px 15px rgb(148, 147, 147);
 }
 
-#dice1 { top: 120px; }
+.winner { background-color: #f7f7f7; }
+.winner .player-name { font-weight: 300; color: #EB4D4D; }
