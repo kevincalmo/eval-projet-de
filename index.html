@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeux de dé</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!--creation du container du jeu -->
+    <div class="container">
+
+        <!--Joueur 1 -->
+        <div class="player-0-panel active">
+            <div class="player-name" id="name-0">Joueur 1</div>
+            <div class="player-score" id="score-0"></div>
+            <div class="player-current-box">
+                <div class="player-current-label">En cours</div>
+                <div class="player-current-score" id="current-0"></div>
+            </div>
+        </div>
+
+        <!--joueur 2-->
+        <div class="player-1-panel">
+            <div class="player-name" id="name-1">Joueur 2</div>
+            <div class="player-score" id="score-1"></div>
+            <div class="player-current-box">
+                <div class="player-current-label">En cours</div>
+                <div class="player-current-score" id="current-1"></div>
+            </div>
+        </div>
+
+        <!--Les différents boutons nécéssaires au jeu-->
+        <button class="btn-new">New Game</button>
+        <button class="btn-roll">Roll Dice</button>
+        <button class="btn-hold">Hold</button>
+
+        <!--l'image du dé-->
+        <img src="" alt="dice" class="dice" id="dice">
+    </div>
+    
+    <script src="./script.js"></script>
+</body> 
+</html>
