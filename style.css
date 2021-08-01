@@ -13,6 +13,7 @@ body {
     background: url(./media/5566879.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 /** CONTAINER **/
@@ -120,5 +121,81 @@ button:hover{
     box-shadow: 0px 0px 15px rgb(148, 147, 147);
 }
 
-.winner { background-color: #f7f7f7; }
-.winner .player-name { font-weight: 300; color: #EB4D4D; }
+.winner { 
+    background-color: #f7f7f7; 
+}
+.winner .player-name { 
+    font-weight: bold; 
+    color: #EB4D4D; 
+}
+
+/** MEDIA QUERIES **/
+
+
+
+@media screen and (max-width:830px){
+
+    .container {
+        width: 90%;
+    }
+    .player-0-panel,
+    .player-1-panel {
+        padding-top: 15%;
+    }
+}
+
+@media screen and (max-width:768px){
+    .dice{
+        width: 70px;
+        height: 70px;
+    }
+}
+@media screen and (max-width:500px){
+    .player-0-panel,
+    .player-1-panel{
+        padding-top: 25%;
+    }
+    .player-score {
+        font-size: 80px;
+    }
+    .btn-hold{
+        top:460px;
+    }
+    .btn-roll{
+        top:400px;
+    }
+}
+@media screen and (max-width:500px){
+    
+    .player-current-box{
+        margin-top: 30%;
+        width: 50%;
+    }
+    .btn-hold{
+        top:480px;
+    }
+    .btn-roll{
+        top:420px;
+    }
+}
+@media screen and (max-width:400px){
+    .player-0-panel,
+    .player-1-panel {
+        padding-top: 25%;
+    }
+    .player-name,
+    .active .player-name{
+        font-size: 1.5rem;
+    }
+    .player-score {
+        font-size: 60px;
+    }
+    .player-current-box {
+        width: 60%;
+        margin-top: 80%;
+    }
+    
+    .dice {
+        top: 43%;
+    }
+}
