@@ -43,7 +43,6 @@ body {
 }
 .active .player-name {
     font-weight: bold;
-    font-size: 1.9rem;
 }
 
 .player-name {
